@@ -37,13 +37,20 @@ if ((COMPRESSION_LEVEL > 9)) || ((COMPRESSION_LEVEL < 1)); then
 	abort "COMPRESSION_LEVEL must be between 1 and 9"
 fi
 
+# Original
+#build_functions=(
+#	build_youtube build_music
+#	build_twitter build_reddit
+#	build_twitch build_tiktok
+#	build_spotify build_ticktick
+#	build_warn_wetter build_backdrops
+#	build_windy
+#)
+
 build_functions=(
 	build_youtube build_music
 	build_twitter build_reddit
-	build_twitch build_tiktok
-	build_spotify build_ticktick
-	build_warn_wetter build_backdrops
-	build_windy
+	build_twitch build_spotify
 )
 
 log "**App Versions:**"
