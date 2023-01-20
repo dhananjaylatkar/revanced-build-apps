@@ -1,13 +1,13 @@
 # see https://github.com/j-hc/revanced-magisk-module/blob/main/CONFIG.md for more detailed explanations
 compression-level = 9 # compression level for module zips. between 1 and 9
 logging-to-file = true # enables logging of every patch process to a seperate file
-enable-magisk-update = true # set this to false if you do not want to receive updates for the module in magisk app
+enable-magisk-update = false # set this to false if you do not want to receive updates for the module in magisk app
 parallel-jobs = 3 # max number of concurrent building jobs
-build-mindetach-module = true
+build-mindetach-module = false # Default: true (Needed for root version)
 
 [YouTube]
 enabled = true # add 'enabled = false' key to entries to not build them
-build-mode = "both" # 'both', 'apk' or 'module'
+build-mode = "apk" # 'both', 'apk' or 'module'
 excluded-patches = "debugging hide-cast-button hide-captions-button" # whitespace seperated list of patches to exclude (multiline strings are not supported)
 included-patches = "" # whitespace seperated list of patches to include
 version = "auto" # 'auto', 'latest' or a custom one like '17.40.41'
@@ -16,7 +16,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube/"
 module-prop-name = "ytrv-magisk"
 
 [Music-arm64]
-build-mode = "both"
+build-mode = "apk"
 app-name = "Music"
 excluded-patches = ""
 included-patches = ""
